@@ -2,14 +2,14 @@ import Search from "./Search";
 import Random from "./Random";
 import "./NavBar.css";
 
-export default function NavBar() {
+export default function NavBar({ search, addList, random }) {
   return (
     <div className="navBar">
-      <Search />
-      <Random />
-      <button>All Characters</button>
-      <Search />
-      <Random />
+      <Search search={search} cardLocation="left" />
+      <Random random={random} cardLocation="left" />
+      <button onClick={addList}>All Characters</button>
+      <Search search={search} cardLocation="right" />
+      <Random random={random} cardLocation="right" />
     </div>
   );
 }
