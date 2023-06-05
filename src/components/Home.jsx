@@ -6,8 +6,6 @@ import Cards from "./Cards.jsx";
 import List from "./List.jsx";
 
 export default function Home({ allCharacters }) {
-  //console.log(allCharacters);
-
   const [chars, setChars] = useState({
     cardLeft: {},
     cardRight: {},
@@ -16,13 +14,14 @@ export default function Home({ allCharacters }) {
 
   const search = function (name, cardLocation) {
     const findCharacter = allCharacters.find((c) => c.name === name);
-    if (cardLocation === "left") {
-      setChars({ ...chars, cardLeft: findCharacter });
+    if (name) {
+      if (cardLocation === "left") {
+        setChars({ ...chars, cardLeft: findCharacter });
+      }
+      if (cardLocation === "right") {
+        setChars({ ...chars, cardRight: findCharacter });
+      }
     }
-    if (cardLocation === "right") {
-      setChars({ ...chars, cardRight: findCharacter });
-    }
-    //console.log(chars);
   };
 
   const addList = function () {
