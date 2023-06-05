@@ -1,7 +1,6 @@
 import React from "react";
 import Cardi from "./Cardi";
 import "./Cards.css";
-import Imagen from "../assets/StarWarsBattle.jpg";
 
 export default function Cards({ characters }) {
   const left = characters.cardLeft.name ? characters.cardLeft : null;

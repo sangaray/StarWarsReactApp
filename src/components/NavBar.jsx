@@ -7,9 +7,11 @@ export default function NavBar({ search, addList, random }) {
     <div className="navBar">
       <Search search={search} cardLocation="left" />
       <Random random={random} cardLocation="left" />
-      <button onClick={addList}>All Characters</button>
-      <Search search={search} cardLocation="right" />
+      <button className="button" onClick={addList}>
+        ALL CHARACTERS
+      </button>
       <Random random={random} cardLocation="right" />
+      <Search search={search} cardLocation="right" />
     </div>
   );
 }
